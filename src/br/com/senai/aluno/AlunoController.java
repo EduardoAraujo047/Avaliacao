@@ -35,16 +35,16 @@ public class AlunoController {
 			
 				switch(opcao) {
 				case 1:
-					alunos.add(cadastarAluno());
+					alunos.add(cadastarAlunos());
 					break;
 				case 2:
-					editarAluno(alunos);
+					editarAlunos(alunos);
 					break;
 				case 3:
-					listarAluno(alunos);
+					listarAlunos(alunos);
 					break;
 				case 4:
-					excluirAluno(alunos);
+					excluirAlunos(alunos);
 					break;
 				case 5:
 					sair = true;
@@ -56,7 +56,7 @@ public class AlunoController {
 			} while(!sair);
 		}
 
-	public Aluno cadastarAluno() {
+	public Aluno cadastarAlunos() {
 		Aluno aluno = new Aluno();
 		
 		System.out.println("----- CADASTRAR NOVO ALUNO -----");
@@ -80,9 +80,9 @@ public class AlunoController {
 		return aluno;
 	}
 	
-	public List<Aluno> editarAluno(List<Aluno> alunos) {
+	public List<Aluno> editarAlunos(List<Aluno> alunos) {
 		Aluno aluno = new Aluno();
-		listarAluno(alunos);
+		listarAlunos(alunos);
 		
 		if(alunos.isEmpty()) {
 			return null;
@@ -176,7 +176,7 @@ public class AlunoController {
 		return alunos;
 	} 
 	
-	public List<Aluno> listarAluno(List<Aluno> alunos){
+	public List<Aluno> listarAlunos(List<Aluno> alunos){
 		
 		if(alunos.isEmpty()) {
 			System.out.println("Não possui alunos cadastrados!");
@@ -202,9 +202,9 @@ public class AlunoController {
 		return alunos;
 	}	
 	
-	public void excluirAluno(List<Aluno> alunos) {
+	public void excluirAlunos(List<Aluno> alunos) {
 		
-		listarAluno(alunos);
+		listarAlunos(alunos);
 		
 		if(alunos.isEmpty()) {
 			return;

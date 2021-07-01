@@ -33,16 +33,16 @@ public class CursoController {
 			
 			switch(opcao) {
 			case 1:
-				cursos.add(cadastrarCurso());
+				cursos.add(cadastrarCursos());
 				break;
 			case 2:
-				listarCurso(cursos);
+				listarCursos(cursos);
 				break;
 			case 3:
-				editarCurso(cursos);
+				editarCursos(cursos);
 				break;
 			case 4:
-				excluirCurso(cursos);
+				excluirCursos(cursos);
 				break;
 			case 5:
 				sair = true;
@@ -54,7 +54,7 @@ public class CursoController {
 		}while (!sair);
 	}
 	
-	public Curso cadastrarCurso() {
+	public Curso cadastrarCursos() {
 		Curso curso = new Curso();
 		
 		System.out.println("----- CADASTRAR NOVO CURSO -----");
@@ -65,9 +65,9 @@ public class CursoController {
 		return curso;		
 	}
 	
-	public List<Curso> editarCurso(List<Curso> cursos) {
+	public List<Curso> editarCursos(List<Curso> cursos) {
 		Curso curso = new Curso();
-		listarCurso(cursos);
+		listarCursos(cursos);
 		
 		if (cursos.isEmpty()) {
 			return null;
@@ -99,7 +99,7 @@ public class CursoController {
 		return cursos;
 	}
 	
-	public List<Curso> listarCurso(List<Curso> cursos) {
+	public List<Curso> listarCursos(List<Curso> cursos) {
 		
 		if(cursos.isEmpty()) {
 			System.out.println("Não possui cursos cadastrados!");
@@ -120,9 +120,9 @@ public class CursoController {
 		}
 		return cursos;
 	}
-	public void excluirCurso(List<Curso> cursos) {
+	public void excluirCursos(List<Curso> cursos) {
 		
-		listarCurso(cursos);
+		listarCursos(cursos);
 		
 		if(cursos.isEmpty()) {
 			return;
