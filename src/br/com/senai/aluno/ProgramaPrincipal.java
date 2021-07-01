@@ -13,6 +13,10 @@ public class ProgramaPrincipal {
 		List<Aluno> alunos = new ArrayList<>();
 		List<Curso> cursos = new ArrayList<>();
 		
+		Curso curso = new Curso("Programação");
+		
+		cursos.add(curso);
+				
 		AlunoController alunoController = new AlunoController();
 		CursoController cursoController = new CursoController();
 		
